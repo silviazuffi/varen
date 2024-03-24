@@ -16,7 +16,10 @@ Place the network in the folder:
 ```
 varen/code/cachedir/snapshots/varen/
 ```
-
+Download the [horse smal model](https://) and place it in the folder:
+```
+varen/model/
+```
 If you want to run the training code you need the [dataset](https://).
 Place the scans and the registrations in the folders:
 ```

@@ -18,3 +18,7 @@ def bound_reg_loss(v, f):
     loss = mesh_edge_loss(meshes)
     return loss
 
+def A_loss(A, idx, pose_dim=4):
+    # Want the weights for the specified parts to be low
+    loss =  torch.mean(torch.abs(A.view(A.shape[0],-1,pose_dim)[:,idx,:]))
+    return loss

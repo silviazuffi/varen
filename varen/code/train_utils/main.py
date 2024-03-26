@@ -19,6 +19,8 @@ flags.DEFINE_float('regularization_weight', 10, '')
 flags.DEFINE_float('regularization_weight_bound', 100, '') 
 flags.DEFINE_float('distance_weight', 1000, '') 
 flags.DEFINE_boolean('reg_on_boundary', True, '')
+flags.DEFINE_boolean('use_A_loss', True, '')
+flags.DEFINE_float('A_loss_weight', 1000, '')
 
 opts = flags.FLAGS
 
@@ -72,6 +74,14 @@ class HorseTrainer(train_utils.Trainer):
             self.loss_reg_bound = self.opts.regularization_weight_bound*loss_utils.bound_reg_loss(def_v, self.boundary_faces) 
             loss += self.loss_reg_bound
 
+        if self.opts.use_A_loss:
+            parts_idx = []
+            for pa in ['Tail1', 'Tail2', 'Tail3', 'Tail4', 'Tail5', 'LFToe', 'RFToe', 'LBToe', 'RBToe', 'Mouth', 'LEar', 'REar']:
+                parts_idx += [(self.model.smal.parts[pa]-1)] # As we do not consider the root
+            pose_dim=4
+            self.A_loss = self.opts.A_loss_weight*loss_utils.A_loss(A[:,:(self.model.smal.nJ-1)*pose_dim], parts_idx, pose_dim=pose_dim)
+            loss += self.A_loss
+
         self.loss += loss
 
 
@@ -81,6 +91,7 @@ class HorseTrainer(train_utils.Trainer):
             ('loss_dist', self.loss_dist.item()),
             ('loss_reg', self.loss_reg.item()),
             ('bound', self.loss_reg_bound.item()),
+            ('A', self.A_loss.item()),
         ])
         sc_dict['loss'] = self.loss.item()
         return sc_dict

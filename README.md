@@ -54,7 +54,7 @@ If you found any of the pieces of code useful in this repo, please cite the foll
 ```
 @inproceedings{Zuffi:CVPR:2024,  
   title = {{VAREN}: Very Accurate and Realistic Equine Network},  
-  author = {Zuffi, Silvia and Mellbin, Ylva and Li, Ci and Hoeschle, Markus and Polikovsky, Senya and Kjellström, Hedvig and Hernlund, Elin and Black, Michael J.},  
+  author = {Zuffi, Silvia and Mellbin, Ylva and Li, Ci and Hoeschle, Markus and Kjellström, Hedvig and Polikovsky, Senya  and Hernlund, Elin and Black, Michael J.},  
   booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},  
   pages = {},
   month = Jun,

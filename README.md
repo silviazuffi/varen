@@ -49,7 +49,7 @@ To compute the errors on the testset (by default on the outside shape space data
 
 ## Citation
 
-If you found any of the pieces of code useful in this repo, please cite the following papers:
+If you found the model or any of the pieces of code useful in this repo, please cite the paper:
 
 ```
 @inproceedings{Zuffi:CVPR:2024,  

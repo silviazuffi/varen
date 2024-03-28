@@ -58,7 +58,7 @@ If you found the model or any of the pieces of code useful in this repo, please 
   booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},  
   pages = {},
   month = Jun,
-  year = {2024}. 
+  year = 2024
 }
 
 

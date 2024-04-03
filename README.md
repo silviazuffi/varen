@@ -11,23 +11,24 @@ conda activate pytorch3d
 conda install pip
 pip install absl-py
 ```
-Clone the repository and then download the pre-trained [network](https://).
-Place the network in the folder:
+Clone the repository.
+Registed on the [project website](https://varen.is.tue.mpg.de).
+Download the checkpoint 'pred_net_100.pth' and place it in the folder:
 ```
-varen/code/cachedir/snapshots/varen/
+varen/varen/code/cachedir/snapshots/varen/
 ```
-Download the [horse smal model](https://) and place it in the folder:
+Download the horse smal model 'varen_smal_real_horse.pkl' and place it in the folder:
 ```
-varen/model/
+varen/varen/model/
 ```
-If you want to run the training code you need the [dataset](https://).
-Place the scans and the registrations in the folders:
+If you want to run the training code you need the dataset.
+Download and place the scans 'decimated_clean.tar' and the registrations 'registrations.tar' in the folders:
 ```
-varen/scans/decimated_clean/
-varen/registrations/
+varen/data/scans/decimated_clean/
+varen/data/registrations/
 ```
-If you want to compute the errors on the testset you need the [testset](https://).
-Place the testset in the folder
+If you want to compute the errors on the testset you need the testset.
+Download 'testset_inside_shape_space.tar' and 'testset_outside_shape_space.tar' and place the extracted files in the folders:
 ```
 varen/data/testset_outside_shape_space
 varen/data/testset_inside_shape_space
@@ -36,7 +37,7 @@ varen/data/testset_inside_shape_space
 
 
 ## Running the code
-To retrain the model:
+To retrain the model, from the 'varen' directory:
 ```
 ./train.sh
 ```

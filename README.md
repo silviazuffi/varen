@@ -1,7 +1,7 @@
 # VAREN
 This repository contains the VAREN horse model describen in the paper : _VAREN: Very Accurate and Realistic Equine Network_, by Silvia Zuffi, Ylva Mellbin, Ci Li, Markus Hoeschle, Hedvig Kjellström, Senya Polikovsky, Elin Hernlund, and Michael J. Black, CVPR 2024. 
 
-![teaser](./teaser_larger1.png)
+![teaser](./images/teaser_larger1.png)
 
 ## Installation
 Follow the instructions to install [pytorch3d](https://github.com/facebookresearch/pytorch3d/tree/main)
@@ -22,7 +22,7 @@ Download the horse smal model 'varen_smal_real_horse.pkl' and place it in the fo
 varen/varen/model/
 ```
 If you want to run the training code you need the dataset.
-Download and place the scans 'decimated_clean.tar' and the registrations 'registrations.tar' in the folders:
+Download and place the extracted scans 'decimated_clean.tar' and the extracted registrations 'registrations.tar' in the folders:
 ```
 varen/data/scans/decimated_clean/
 varen/data/registrations/
@@ -59,7 +59,7 @@ If you found the model or any of the pieces of code useful in this repo, please 
   booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},  
   pages = {},
   month = Jun,
-  year = 2024
+  year = {2024}
 }
 
 

@@ -1,7 +1,7 @@
 # VAREN
 This repository contains the VAREN horse model describen in the paper : _VAREN: Very Accurate and Realistic Equine Network_, by Silvia Zuffi, Ylva Mellbin, Ci Li, Markus Hoeschle, Hedvig Kjellström, Senya Polikovsky, Elin Hernlund, and Michael J. Black, CVPR 2024. 
 
-![teaser](./images/teaser_larger1.png)
+![teaser](./teaser_larger1.png)
 
 ## Installation
 Follow the instructions to install [pytorch3d](https://github.com/facebookresearch/pytorch3d/tree/main)
